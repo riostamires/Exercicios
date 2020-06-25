@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Primo {
-    public static void runPrimo() {
+public class NumerosPrimos {
+    public static void runNumerosPrimos() {
         int numero;
         int cont = 1;
         int divisores = 0;
