@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CriarCadastroSteps {
 
@@ -15,13 +17,17 @@ public class CriarCadastroSteps {
     @Given("^que acessei a URL correta$")
 
     public void que_acessei_a_URL_correta() throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "c:\\drivers\\chrome\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
-        driver = new ChromeDriver(options);
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+//        ChromeOptions options = new ChromeOptions();
+//        options.setBinary("C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+//        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://cliente.submarino.com.br/simple-login/cadastro/pf");
-        Thread.sleep(5000);
+//      Thread.sleep(5000);
+        new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(By.id("email-input")));
+
+
     }
 
     @Given("^preenchi o email com \"([^\"]*)\"$")
@@ -74,7 +80,8 @@ public class CriarCadastroSteps {
 
     @Then("^devo ser alertado \"([^\"]*)\"$")
     public void devo_ser_alertado(String arg1) throws Throwable {
-String texto = driver.findElement(By.xpath("//*[@id=\"email\"]/div")).getText();
+        String texto = driver.findElement(By.xpath("//*[@id=\"email\"]/div")).getText();
         Assert.assertEquals("Campo obrigatório", texto);
+        driver.quit();
     }
 }
