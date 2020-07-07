@@ -3,6 +3,6 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/criar_cadastro_submarino.feature", glue = "")
+@CucumberOptions(features = "src/test/resources/consultar_jogos.feature", glue = "")
 public class runner {
   }
