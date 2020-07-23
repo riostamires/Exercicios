@@ -1,0 +1,8 @@
+flowhr\core\Constantes.class
+flowhr\tests\auxiliares\GerarString.class
+flowhr\core\BaseTest.class
+flowhr\tests\steps\ConsultarVagas.class
+flowhr\tests\Runner.class
+flowhr\core\DriverManagerFactory.class
+flowhr\tests\PageObject.class
+flowhr\core\MySQLConnect.class

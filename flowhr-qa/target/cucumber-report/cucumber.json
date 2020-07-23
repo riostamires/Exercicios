@@ -1,0 +1,64 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Deve mostrar as vagas disponíveis",
+        "description": "",
+        "id": "consultar-vagas-no-sistema-flowhr;deve-mostrar-as-vagas-disponíveis",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3658843300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "que tenho o jwt correto para acessar a API",
+            "match": {
+              "location": "ConsultarVagas.gerarJwt()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 364347100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "executar o servico de Consultar Vaga",
+            "match": {
+              "location": "ConsultarVagas.executarConsultaVaga()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 594200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "deve mostrar as vagas disponíveis",
+            "match": {
+              "location": "ConsultarVagas.validarConsultaVaga()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Consultar vagas no sistema FlowHR",
+    "description": "Como um usuário\r\nEu quero consultar as vagas disponíveis\r\nPara poder dar andamento aos processos seletivos",
+    "id": "consultar-vagas-no-sistema-flowhr",
+    "keyword": "Feature",
+    "uri": "src/main/java/flowhr/tests/features/consultar_vagas_flowhr.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@vagas"
+      }
+    ]
+  }
+]
