@@ -22,13 +22,14 @@ public class RealizarLogin extends BaseTest {
 
     String jwtCurrent = "";
     Response response;
+    RequestSpecification requestSpecification = RestAssured.given();
     GerarString gerarString = new GerarString();
     String bodyjson = gerarString.generateStringFromResource("src/main/java/flowhr/tests/arquivosbody/authenticate.json");
     ArrayList resultadoList = new ArrayList();
     Connection conn = MySQLConnect.getConnection();
     Statement stmt = conn.createStatement();
 
-    public RealizarLogin() throws IOException, SQLException {
+    public RealizarLogin() throws SQLException, IOException {
     }
 
     @Given("^que informei o usuário e senha corretamente$")
@@ -37,38 +38,39 @@ public class RealizarLogin extends BaseTest {
         while (rs.next()) {
             resultadoList.add(rs.getString("SENHA"));
         }
+        bodyjson = bodyjson.replace("senhapadrao", resultadoList.get(0).toString());
+        conn.close();
     }
 
     @When("^realizar o login$")
     public void realizarLogin() {
-        RequestSpecification requestSpecification = RestAssured.given();
         response = requestSpecification
                 .headers("Content-Type", "application/json")
-                .body(bodyjson.replace("senhapadrao", resultadoList.get(0).toString()))
+                .body(bodyjson)
                 .when().post("/authenticate");
     }
 
 
     @Given("^que não informei os dados$")
     public void que_não_informei_os_dados() throws Throwable {
-        ResultSet rsEmBranco = stmt.executeQuery("SELECT * FROM login WHERE USUARIO = ''");
-        while (rsEmBranco.next()) {
-            resultadoList.add(rsEmBranco.getString("SENHA"));
-        }
+        bodyjson = bodyjson.replace("senhapadrao","").replace("Jack","");
     }
 
     @Given("^que informei dados invalidos$")
     public void que_informei_dados_invalidos() throws Throwable {
-        ResultSet rsInvalido = stmt.executeQuery("SELECT * FROM login WHERE USUARIO = 'xxx'");
-        while (rsInvalido.next()) {
-            resultadoList.add(rsInvalido.getString("SENHA"));
+        ResultSet rs = stmt.executeQuery("SELECT * FROM login WHERE USUARIO = 'Jack'");
+        while (rs.next()) {
+            resultadoList.add(rs.getString("SENHA"));
         }
+        if (resultadoList.get(0).equals("senhapadrao")) {
+            bodyjson = bodyjson.replace("senhapadrao", "senhainvalida");
+        }
+        conn.close();
     }
 
     @Then("^não deve acessar minha conta no sistema$")
     public void não_deve_acessar_minha_conta_no_sistema() throws Throwable {
         Assert.assertEquals(401, response.getStatusCode());
-
     }
 
     @Then("^deve acessar minha conta no sistema$")
@@ -76,6 +78,5 @@ public class RealizarLogin extends BaseTest {
         Assert.assertEquals(200, response.getStatusCode());
         Assert.assertNotNull(response.jsonPath().get("jwt").toString());
         jwtCurrent = response.jsonPath().get("jwt").toString();
-        conn.close();
     }
 }

@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1676429200,
+              "duration": 2369931900,
               "status": "passed"
             },
             "line": 8,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 1039084100,
+              "duration": 1080731800,
               "status": "passed"
             },
             "line": 9,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 626934100,
+              "duration": 697455700,
               "status": "passed"
             },
             "line": 10,
@@ -58,7 +58,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1075858500,
+              "duration": 453010400,
               "status": "passed"
             },
             "line": 13,
@@ -70,9 +70,8 @@
           },
           {
             "result": {
-              "duration": 6435700,
-              "error_message": "java.lang.IndexOutOfBoundsException: Index: 0, Size: 0\r\n\tat java.util.ArrayList.rangeCheck(ArrayList.java:657)\r\n\tat java.util.ArrayList.get(ArrayList.java:433)\r\n\tat flowhr.tests.steps.RealizarLogin.realizarLogin(RealizarLogin.java:47)\r\n\tat ✽.When realizar o login(src/main/java/flowhr/tests/features/realizar_login.feature:14)\r\n",
-              "status": "failed"
+              "duration": 225607000,
+              "status": "passed"
             },
             "line": 14,
             "name": "realizar o login",
@@ -83,7 +82,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 50800,
+              "status": "passed"
             },
             "line": 15,
             "name": "não deve acessar minha conta no sistema",
@@ -104,7 +104,7 @@
         "steps": [
           {
             "result": {
-              "duration": 987630400,
+              "duration": 586225300,
               "status": "passed"
             },
             "line": 18,
@@ -116,9 +116,8 @@
           },
           {
             "result": {
-              "duration": 5325000,
-              "error_message": "java.lang.IndexOutOfBoundsException: Index: 0, Size: 0\r\n\tat java.util.ArrayList.rangeCheck(ArrayList.java:657)\r\n\tat java.util.ArrayList.get(ArrayList.java:433)\r\n\tat flowhr.tests.steps.RealizarLogin.realizarLogin(RealizarLogin.java:47)\r\n\tat ✽.When realizar o login(src/main/java/flowhr/tests/features/realizar_login.feature:19)\r\n",
-              "status": "failed"
+              "duration": 233689500,
+              "status": "passed"
             },
             "line": 19,
             "name": "realizar o login",
@@ -129,7 +128,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 148500,
+              "status": "passed"
             },
             "line": 20,
             "name": "não deve acessar minha conta no sistema",
