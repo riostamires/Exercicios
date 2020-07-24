@@ -77,15 +77,15 @@ font-src * data: blob: 'unsafe-inline';"/>
             var chart = new Chart(ctx, {
   "data": {
     "labels": [
-      "que tenho o jwt correto para acessar a API",
-      "executar o servico de Consultar Vaga",
-      "deve mostrar as vagas disponíveis"
+      "que informei o usuário e senha corretamente",
+      "realizar o login",
+      "deve acessar minha conta no sistema"
     ],
     "datasets": [
       {
         "data": [
-          3,
-          0,
+          1,
+          1,
           0
         ],
         "backgroundColor": [
@@ -147,7 +147,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 3,
+            "stepSize": 1,
             "display": true
           },
           "stacked": true,
@@ -250,17 +250,17 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2020-07-22 15:03:09</span>
+            <span class="text-light">2020-07-24 10:23:43</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
                     <h5>
-                            <a href="pages/feature-scenarios/feature_0.html">Consultar vagas no sistema FlowHR</a>
-                        <span class="small">src/main/java/flowhr/tests/features/consultar_vagas_flowhr.feature</span>
+                            <a href="pages/feature-scenarios/feature_0.html">Realizar login no sistema FlowHR</a>
+                        <span class="small">src/main/java/flowhr/tests/features/realizar_login.feature</span>
                     </h5>
-                    <h3>Deve mostrar as vagas disponíveis</h3>
+                    <h3>Deve fazer login com sucesso</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -278,9 +278,9 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-            <li class="list-group-item">Test Runtime:<br>0m 04s 023ms</li>
+            <li class="list-group-item">Test Runtime:<br>0m 03s 452ms</li>
             <li class="list-group-item">
-                    <a href="pages/tag-scenarios/tag_vagas.html">@vagas</a>            </li>
+                    <a href="pages/tag-scenarios/tag_login.html">@login</a>            </li>
             </div>
         </div>
     </div>
@@ -324,13 +324,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">1.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="ConsultarVagas.gerarJwt()">
-                                    <a href="pages/step-scenarios/step_1691278687.html"><span
-                                                class="keyword">Given </span> que tenho o jwt correto para acessar a API</a>
+                                <span data-toggle="tooltip" title="RealizarLogin.buscarDadosLogin()">
+                                    <a href="pages/step-scenarios/step_1133088311.html"><span
+                                                class="keyword">Given </span> que informei o usuário e senha corretamente</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 03s 658ms
+                                0m 01s 700ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -343,13 +343,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">2.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="ConsultarVagas.executarConsultaVaga()">
-                                    <a href="pages/step-scenarios/step_01372424776.html"><span
-                                                class="keyword">When </span> executar o servico de Consultar Vaga</a>
+                                <span data-toggle="tooltip" title="RealizarLogin.realizarLogin()">
+                                    <a href="pages/step-scenarios/step_0218809884.html"><span
+                                                class="keyword">When </span> realizar o login</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 364ms
+                                0m 01s 126ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -362,13 +362,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">3.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="ConsultarVagas.validarConsultaVaga()">
-                                    <a href="pages/step-scenarios/step_0912050006.html"><span
-                                                class="keyword">Then </span> deve mostrar as vagas disponíveis</a>
+                                <span data-toggle="tooltip" title="RealizarLogin.validarAcesso()">
+                                    <a href="pages/step-scenarios/step_0560801644.html"><span
+                                                class="keyword">Then </span> deve acessar minha conta no sistema</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 000ms
+                                0m 00s 624ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -387,7 +387,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.5.0 - Report generated on 2020-07-22 15:03:09.</span>
+        <span>Cluecumber Report Plugin version 2.5.0 - Report generated on 2020-07-24 10:23:43.</span>
     </div>
 </footer>    </body>
     </html>

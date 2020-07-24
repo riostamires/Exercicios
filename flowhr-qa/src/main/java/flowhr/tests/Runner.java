@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/main/java/flowhr/tests/features/consultar_vagas_flowhr.feature",
-        tags = "@vagas", plugin = {"json:target/cucumber-report/cucumber.json"})
+@CucumberOptions(features = "src/main/java/flowhr/tests/features/realizar_login.feature",
+        tags = "@login", plugin = {"json:target/cucumber-report/cucumber.json"})
 
 public class Runner extends BaseTest {
 }

@@ -4,60 +4,152 @@
     "elements": [
       {
         "line": 7,
-        "name": "Deve mostrar as vagas disponíveis",
+        "name": "Deve fazer login com sucesso",
         "description": "",
-        "id": "consultar-vagas-no-sistema-flowhr;deve-mostrar-as-vagas-disponíveis",
+        "id": "realizar-login-no-sistema-flowhr;deve-fazer-login-com-sucesso",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3658843300,
+              "duration": 1676429200,
               "status": "passed"
             },
             "line": 8,
-            "name": "que tenho o jwt correto para acessar a API",
+            "name": "que informei o usuário e senha corretamente",
             "match": {
-              "location": "ConsultarVagas.gerarJwt()"
+              "location": "RealizarLogin.buscarDadosLogin()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 364347100,
+              "duration": 1039084100,
               "status": "passed"
             },
             "line": 9,
-            "name": "executar o servico de Consultar Vaga",
+            "name": "realizar o login",
             "match": {
-              "location": "ConsultarVagas.executarConsultaVaga()"
+              "location": "RealizarLogin.realizarLogin()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 594200,
+              "duration": 626934100,
               "status": "passed"
             },
             "line": 10,
-            "name": "deve mostrar as vagas disponíveis",
+            "name": "deve acessar minha conta no sistema",
             "match": {
-              "location": "ConsultarVagas.validarConsultaVaga()"
+              "location": "RealizarLogin.validarAcesso()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Não deve fazer login com dados em branco",
+        "description": "",
+        "id": "realizar-login-no-sistema-flowhr;não-deve-fazer-login-com-dados-em-branco",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1075858500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "que não informei os dados",
+            "match": {
+              "location": "RealizarLogin.que_não_informei_os_dados()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6435700,
+              "error_message": "java.lang.IndexOutOfBoundsException: Index: 0, Size: 0\r\n\tat java.util.ArrayList.rangeCheck(ArrayList.java:657)\r\n\tat java.util.ArrayList.get(ArrayList.java:433)\r\n\tat flowhr.tests.steps.RealizarLogin.realizarLogin(RealizarLogin.java:47)\r\n\tat ✽.When realizar o login(src/main/java/flowhr/tests/features/realizar_login.feature:14)\r\n",
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "realizar o login",
+            "match": {
+              "location": "RealizarLogin.realizarLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "não deve acessar minha conta no sistema",
+            "match": {
+              "location": "RealizarLogin.não_deve_acessar_minha_conta_no_sistema()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Não deve fazer login com dados inválidos",
+        "description": "",
+        "id": "realizar-login-no-sistema-flowhr;não-deve-fazer-login-com-dados-inválidos",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 987630400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "que informei dados invalidos",
+            "match": {
+              "location": "RealizarLogin.que_informei_dados_invalidos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5325000,
+              "error_message": "java.lang.IndexOutOfBoundsException: Index: 0, Size: 0\r\n\tat java.util.ArrayList.rangeCheck(ArrayList.java:657)\r\n\tat java.util.ArrayList.get(ArrayList.java:433)\r\n\tat flowhr.tests.steps.RealizarLogin.realizarLogin(RealizarLogin.java:47)\r\n\tat ✽.When realizar o login(src/main/java/flowhr/tests/features/realizar_login.feature:19)\r\n",
+              "status": "failed"
+            },
+            "line": 19,
+            "name": "realizar o login",
+            "match": {
+              "location": "RealizarLogin.realizarLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "não deve acessar minha conta no sistema",
+            "match": {
+              "location": "RealizarLogin.não_deve_acessar_minha_conta_no_sistema()"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Consultar vagas no sistema FlowHR",
-    "description": "Como um usuário\r\nEu quero consultar as vagas disponíveis\r\nPara poder dar andamento aos processos seletivos",
-    "id": "consultar-vagas-no-sistema-flowhr",
+    "name": "Realizar login no sistema FlowHR",
+    "description": "Como um usuário\r\nEu quero fazer login no sistema\r\nPara acessar informações sobre as vagas",
+    "id": "realizar-login-no-sistema-flowhr",
     "keyword": "Feature",
-    "uri": "src/main/java/flowhr/tests/features/consultar_vagas_flowhr.feature",
+    "uri": "src/main/java/flowhr/tests/features/realizar_login.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@vagas"
+        "name": "@login"
       }
     ]
   }

@@ -85,8 +85,8 @@ font-src * data: blob: 'unsafe-inline';"/>
     "datasets": [
       {
         "data": [
-          1,
           0,
+          1,
           0
         ],
         "backgroundColor": [
@@ -189,7 +189,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2020-07-22 15:03:08</span>
+            <span class="text-light">2020-07-23 15:28:44</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -216,7 +216,7 @@ font-src * data: blob: 'unsafe-inline';"/>
             <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item" data-cluecumber-item="total-runtime">
-                    Test Runtime:<br>0m 04s 023ms
+                    Test Runtime:<br>0m 03s 750ms
                 </li>
             </ul>
             </div>
@@ -233,13 +233,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                 </li>
                 <li class="list-group-item" data-cluecumber-item="scenario-summary">
                         <a href="javascript:"
-                           onclick="document.location.hash='anchor-passed';">1
+                           onclick="document.location.hash='anchor-passed';">0
                             passed</a>     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                         <br>
                         <a href="javascript:"
-                           onclick="document.location.hash='anchor-failed';">0
+                           onclick="document.location.hash='anchor-failed';">1
                             failed</a>     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
        title="failed"><span style="display:none">failed</span></i>
 
@@ -257,22 +257,20 @@ font-src * data: blob: 'unsafe-inline';"/>
     </div>
 
 
-
-
-        <a class="anchor" id="anchor-passed"></a>
-        <div class="row" id="card_passed" data-cluecumber-item="scenario-summary-table">
+        <a class="anchor" id="anchor-failed"></a>
+        <div class="row" id="card_failed" data-cluecumber-item="scenario-summary-table">
             <div class=" col-sm-12">
                 <div class="card">
 
-                            <div class="card-header border-color-passed">
+                            <div class="card-header border-color-failed">
                                 1
-        passed Scenario
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
+        failed Scenario
+    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
                             </div>
 
                     <div class="card-body">
-                        <table id="results_passed" class="table table-hover renderAsDataTable">
+                        <table id="results_failed" class="table table-hover renderAsDataTable">
                             <thead>
                             <tr>
                                 <th class="text-left">Feature</th>
@@ -283,7 +281,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                             </thead>
                             <tbody>
 
-                                        <tr class="table-row-passed">
+                                        <tr class="table-row-failed">
                                             <td class="text-left">
                                                 <span data-toggle="tooltip" title="Como um usuário
 Eu quero consultar as vagas disponíveis
@@ -299,8 +297,8 @@ Para poder dar andamento aos processos seletivos | src/main/java/flowhr/tests/fe
                                                 <br>
                                             </td>
                                             <td class="text-right small"
-                                                data-order="4.023.784.600">
-                                                <span class="nobr">0m 04s 023ms</span>
+                                                data-order="3.750.948.300">
+                                                <span class="nobr">0m 03s 750ms</span>
                                             </td>
                                         </tr>
                             </tbody>
@@ -309,12 +307,14 @@ Para poder dar andamento aos processos seletivos | src/main/java/flowhr/tests/fe
                 </div>
             </div>
         </div>
+
+
         </div>
     </main>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.5.0 - Report generated on 2020-07-22 15:03:08.</span>
+        <span>Cluecumber Report Plugin version 2.5.0 - Report generated on 2020-07-23 15:28:44.</span>
     </div>
 </footer>    </body>
     </html>
